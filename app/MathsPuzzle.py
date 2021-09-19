@@ -24,11 +24,6 @@ def get_features_labes_from_image(image_file, features_lables_splitter ='=',  fe
         if(len(features_labels) == 2):
             features_ = features_labels[0].split(features_splitter)
             labels_ = features_labels[1].split(features_splitter)
-            #print("labels_ : ",labels_)
-            if(labels_[0] == '181'):
-                labels_[0] = '191'
-                print("features_ :",features_)
-                print("labels_ :", labels_)
             if('?' not in line):
                 features_ = list(map(lambda x: int(x), features_))
                 labels_ = list(map(lambda x: int(x), labels_))
